@@ -80,18 +80,21 @@ header {
     background-size: cover;
     padding: 80px 20px;
     text-align: center;
-    color: white;
+    color: white; /* Default text color */
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    color: #9E1B32; /* Claret color for better visibility */
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    color: #9E1B32; /* Claret color for better visibility */
 }
+
 
 .cta-button {
     background-color: #0047AB;
