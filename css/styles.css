@@ -47,7 +47,7 @@ body {
 
 /* Hamburger Menu Button */
 .hamburger {
-    display: block; /* Ensure it's shown on mobile */
+    display: block; /* Always show hamburger */
     font-size: 30px;
     color: white;
     background: none;
@@ -56,7 +56,7 @@ body {
     position: absolute;
     top: 15px;
     right: 20px;
-    z-index: 2000; /* Increased z-index */
+    z-index: 2000; /* Ensure it's above navbar */
 }
 
 .hamburger span {
@@ -290,7 +290,7 @@ footer .social-icons a {
 }
 
 /* Responsive Styles for Smaller Screens */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .header-top {
         flex-direction: column;
         align-items: center;
@@ -318,10 +318,12 @@ footer .social-icons a {
         text-align: center;
     }
 
+    /* Ensure hamburger button is always visible */
     .hamburger {
         display: block;
     }
 
+    /* Hide the main menu and only show the mobile version when toggled */
     .navbar ul {
         display: none;
     }
@@ -329,5 +331,10 @@ footer .social-icons a {
     .navbar ul.mobile {
         display: flex;
         flex-direction: column;
+    }
+
+    /* Show the mobile menu when active */
+    .navbar ul.mobile.active {
+        display: flex;
     }
 }
