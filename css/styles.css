@@ -47,7 +47,7 @@ body {
 
 /* Hamburger Menu Button */
 .hamburger {
-    display: block;
+    display: none; /* Hide by default */
     font-size: 30px;
     color: white;
     background: none;
@@ -67,7 +67,6 @@ body {
     border-radius: 5px;
 }
 
-/* Ensure the mobile menu is hidden by default */
 /* Mobile Menu */
 .navbar ul.mobile {
     display: none;
@@ -323,6 +322,41 @@ footer .social-icons a {
     background-color: #7e0f24;
 }
 
+/* Gallery Grid Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  /* Adjust this for smaller sizes */
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Gallery Tile Styling */
+.gallery-tile {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image Styling to Ensure Size is Resized */
+.gallery-tile img {
+    width: 100%;              /* Ensure the image fills the tile */
+    height: 100%;             /* Fill the tile height */
+    object-fit: cover;        /* Ensure the image covers the container without distortion */
+    transition: transform 0.3s ease;  /* Smooth zoom effect */
+}
+
+/* Hover Effect for Gallery Images */
+.gallery-tile:hover {
+    transform: scale(1.05);   /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.gallery-tile:hover img {
+    transform: scale(1.1);    /* Zoom in the image slightly on hover */
+}
+
 /* Responsive Styles for Smaller Screens */
 @media (max-width: 1024px) {
     .header-top {
@@ -371,9 +405,11 @@ footer .social-icons a {
         display: flex;
         flex-direction: column;
     }
+}
 
-    /* Close button styles */
-    .close-btn {
-        display: block; /* Show the close button when the menu is active */
+/* Responsive Styles for Extra Small Screens (mobile devices) */
+@media (max-width: 768px) {
+    .navbar a {
+        font-size: 1rem;
     }
 }
