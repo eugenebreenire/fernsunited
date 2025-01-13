@@ -59,6 +59,14 @@ body {
     z-index: 1100; /* Above the navbar */
 }
 
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
 /* Mobile Navbar */
 .navbar ul.mobile {
     display: none; /* Hidden by default on mobile */
