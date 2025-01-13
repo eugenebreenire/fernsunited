@@ -47,7 +47,7 @@ body {
 
 /* Hamburger Menu Button */
 .hamburger {
-    display: none; /* Hidden by default */
+    display: block; /* Ensure it's shown on mobile */
     font-size: 30px;
     color: white;
     background: none;
@@ -56,7 +56,7 @@ body {
     position: absolute;
     top: 15px;
     right: 20px;
-    z-index: 1100; /* Above the navbar */
+    z-index: 2000; /* Increased z-index */
 }
 
 .hamburger span {
