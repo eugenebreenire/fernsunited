@@ -47,7 +47,7 @@ body {
 
 /* Hamburger Menu Button */
 .hamburger {
-    display: block; /* Always show hamburger */
+    display: block;
     font-size: 30px;
     color: white;
     background: none;
@@ -56,7 +56,7 @@ body {
     position: absolute;
     top: 15px;
     right: 20px;
-    z-index: 2000; /* Ensure it's above navbar */
+    z-index: 10000; /* Ensure it's on top */
 }
 
 .hamburger span {
@@ -67,26 +67,60 @@ body {
     border-radius: 5px;
 }
 
-/* Mobile Navbar */
+/* Ensure the mobile menu is hidden by default */
+/* Mobile Menu */
 .navbar ul.mobile {
-    display: none; /* Hidden by default on mobile */
-    flex-direction: column; /* Stack items vertically */
+    display: none;
+    flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 20px;
-    background-color: #0047AB;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    max-height: 80vh; /* Limit the height of the menu */
+    overflow-y: auto; /* Add scroll if the menu is too long */
 }
 
 .navbar ul.mobile li {
     margin: 10px 0; /* Add space between menu items */
+    padding: 10px; /* Added padding for better spacing */
 }
 
-/* Show menu when active */
+/* Style for mobile menu links */
+.navbar ul.mobile li a {
+    color: #003366;  /* Blue color for the text */
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.navbar ul.mobile li a:hover {
+    color: #800000;  /* Maroon color on hover */
+}
+
+/* When the menu is active, display it */
 .navbar ul.mobile.active {
     display: flex;
+}
+
+/* Close Button Style */
+.close-btn {
+    display: none;
+    font-size: 30px;
+    color: #003366; /* Blue color for the close button */
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 9999; /* Increase z-index to ensure visibility */
+}
+
+/* Close Button Visible on Active Mobile Menu */
+.navbar ul.mobile.active .close-btn {
+    display: block; /* Ensure the close button shows when active */
 }
 
 /* Header with Banner */
@@ -329,12 +363,17 @@ footer .social-icons a {
     }
 
     .navbar ul.mobile {
-        display: flex;
-        flex-direction: column;
+        display: none; 
     }
 
     /* Show the mobile menu when active */
     .navbar ul.mobile.active {
         display: flex;
+        flex-direction: column;
+    }
+
+    /* Close button styles */
+    .close-btn {
+        display: block; /* Show the close button when the menu is active */
     }
 }

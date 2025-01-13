@@ -7,17 +7,39 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Hamburger.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/hamburgers/dist/hamburgers.css">
 </head>
 <body>
 
     <!-- Navbar -->
-<nav class="navbar">
-    <ul>
-        <li><a href="https://fernsunited.com">Home</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-    </ul>
-</nav>
+    <nav class="navbar">
+        <!-- Hamburger Button -->
+        <button class="hamburger hamburger--spin" type="button" id="hamburgerButton">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+
+        <!-- Mobile Navbar (updated class to match the script) -->
+        <ul class="mobile"> <!-- Changed from mobile-menu to mobile -->
+            <li><a href="https://fernsunited.com">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li>
+                <!-- Close button inside the menu -->
+                <button class="close-btn">Close</button>
+            </li>
+        </ul>
+
+        <!-- Desktop Menu -->
+        <ul>
+            <li><a href="https://fernsunited.com">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
     <!-- Header Section -->
     <header>
         <div class="header-top">
@@ -119,5 +141,8 @@
         </div>
         <p>&copy; 2024 Ferns United. All rights reserved.</p>
     </footer>
+
+    <!-- External JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
