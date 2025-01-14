@@ -18,21 +18,21 @@
     <!-- Navbar -->
     <nav class="navbar">
         <!-- Hamburger Button -->
-        <button class="hamburger hamburger--spin" type="button" id="hamburgerButton">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-        </button>
+        <div class="logoNav">
+            <img src="images/FernsIcon.png" alt="Ferns United Logo">
+        </div>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
         <!-- Mobile Navbar (update class to match the script) -->
         <ul class="mobile"> <!-- Changed from mobile-menu to mobile -->
             <li><a href="https://fernsunited.com">Home</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li>
-                <!-- Close button inside the menu -->
-                <button class="close-btn">Close</button>
-            </li>
         </ul>
 
         <!-- Desktop Menu -->
@@ -151,6 +151,12 @@
 
     <!-- Link to External JavaScript File -->
     <script src="js/script.js"></script>
+    <script>
+        // JavaScript to toggle the mobile menu
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.mobile').classList.toggle('open');
+        });
+    </script>
 
 </body>
 
