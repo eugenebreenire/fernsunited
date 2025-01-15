@@ -7,6 +7,18 @@ body {
     color: #333;
 }
 
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.6; /* Adjust line spacing for better readability */
+    margin: 20px auto;
+    max-width: 800px; /* Adjust width as needed */
+    padding: 0 10px; /* Adds some padding to avoid text touching the sides */
+}
+
 /* Navbar Styles */
 .navbar {
     background-color: #0047AB; /* Deep blue for the navbar background */
@@ -326,6 +338,14 @@ footer .social-icons a {
 
 .contact-form-section button:hover {
     background-color: #7e0f24;
+}
+
+/* App Buttons Styling */
+.app-buttons {
+    display: flex;
+    gap: 20px; /* Adds space between buttons */
+    justify-content: center; /* Centers buttons horizontally */
+    align-items: center; /* Centers buttons vertically */
 }
 
 /* Gallery Grid Layout */
