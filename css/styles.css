@@ -7,18 +7,6 @@ body {
     color: #333;
 }
 
-h2 {
-    text-align: center;
-}
-
-p {
-    text-align: justify;
-    line-height: 1.6; /* Adjust line spacing for better readability */
-    margin: 20px auto;
-    max-width: 800px; /* Adjust width as needed */
-    padding: 0 10px; /* Adds some padding to avoid text touching the sides */
-}
-
 /* Navbar Styles */
 .navbar {
     background-color: #0047AB; /* Deep blue for the navbar background */
@@ -208,6 +196,19 @@ header {
     color: #9E1B32; /* Claret color for better visibility */
 }
 
+.app-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+}
+
+.app-buttons a{
+    background-color: #0047AB;
+    padding: 10px;
+}
+
 .cta-button {
     background-color: #0047AB;
     padding: 12px 24px;
@@ -282,7 +283,7 @@ footer {
     background-color: #0047AB;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 10px;
 }
 
 footer .footer-content {
@@ -340,14 +341,6 @@ footer .social-icons a {
     background-color: #7e0f24;
 }
 
-/* App Buttons Styling */
-.app-buttons {
-    display: flex;
-    gap: 20px; /* Adds space between buttons */
-    justify-content: center; /* Centers buttons horizontally */
-    align-items: center; /* Centers buttons vertically */
-}
-
 /* Gallery Grid Layout */
 .gallery-grid {
     display: grid;
@@ -363,6 +356,7 @@ footer .social-icons a {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
 }
 
 /* Image Styling to Ensure Size is Resized */
@@ -381,6 +375,18 @@ footer .social-icons a {
 
 .gallery-tile:hover img {
     transform: scale(1.1);    /* Zoom in the image slightly on hover */
+}
+
+.app-SetUp {
+    text-align: left;
+}
+
+.selector {
+    background-color: #474747;
+    color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
 }
 
 /* Responsive Styles for Smaller Screens */
