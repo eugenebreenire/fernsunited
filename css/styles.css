@@ -7,13 +7,67 @@ body {
     color: #333;
 }
 
+body, html {
+    margin: 0;              /* Remove default margin */
+    padding: 0;             /* Remove default padding */
+}
+
+main {
+    margin: 20px;
+}
+
+/* Gallery Styling */
+
+
+/* Modal Styling */
+.gallery-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    backdrop-filter: blur(5px); /* Apply blur effect to the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-image {
+    display: none;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button Styling */
+.close-button {
+    position: absolute;
+    top: 10%;
+    right: 12%;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: opacity 0.2s ease;
+}
+
+.close-button:hover {
+    opacity: 0.7;
+}
+
 /* Navbar Styles */
 .navbar {
-    background-color: #0047AB; /* Deep blue for the navbar background */
+    background-color: #9E1B32; /* Deep blue for the navbar background */
     padding: 10px 20px;
     position: sticky;
     top: 0; /* Makes navbar stick at the top when scrolling */
-
     z-index: 1000; /* Ensure it's above other elements */
 }
 
@@ -172,7 +226,7 @@ header {
 }
 
 .social-icons a:hover {
-    color: #9E1B32;
+    color: #2a86c4;
 }
 
 /* Hero Section */
@@ -341,12 +395,26 @@ footer .social-icons a {
     background-color: #7e0f24;
 }
 
-/* Gallery Grid Layout */
+/* Gallery Grid Styling */
+/* Horizontal Scroll Container */
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  /* Adjust this for smaller sizes */
-    gap: 1rem;
-    padding: 1rem;
+    overflow-x: auto;      /* Enable horizontal scrolling */
+    overflow-y: hidden;    /* Prevent vertical scroll */
+    white-space: nowrap;   /* Prevent wrapping */
+    padding: 1rem;         /* Add some padding */
+    margin-top: 1rem;      /* Avoid collision with the sticky navbar */
+}
+
+/* Gallery Grid Items */
+.gallery-tile {
+    display: inline-block; /* Keep items in a row */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    min-width: 300px;
 }
 
 /* Gallery Tile Styling */
@@ -356,7 +424,9 @@ footer .social-icons a {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 300px;
+    width: 300px;              /* Fixed width for uniform size */
+    height: 200px;             /* Fixed height for uniform size */
+    flex-shrink: 0;            /* Prevent shrinking to maintain size */
 }
 
 /* Image Styling to Ensure Size is Resized */
@@ -369,13 +439,25 @@ footer .social-icons a {
 
 /* Hover Effect for Gallery Images */
 .gallery-tile:hover {
-    transform: scale(1.05);   /* Slight zoom effect on hover */
+    transform: scale(1.01);   /* Slight zoom effect on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .gallery-tile:hover img {
     transform: scale(1.1);    /* Zoom in the image slightly on hover */
 }
+
+/* Optional: Hide horizontal scrollbar for aesthetic purposes */
+.gallery-grid::-webkit-scrollbar {
+    width: 12px;
+    height: 10px;
+}
+
+.gallery-grid::-webkit-scrollbar-thumb {
+    background: #888;        /* Scrollbar thumb color */
+    border-radius: 6px; 
+}
+
 
 .app-SetUp {
     text-align: left;
@@ -391,6 +473,20 @@ footer .social-icons a {
 
 /* Responsive Styles for Smaller Screens */
 @media (max-width: 1024px) {
+
+    .close-button {
+        top: 25%;
+        right: 2%;
+    }
+
+    .testHeader {
+        display: none;
+    }
+
+    .navbar {
+        display: block;
+    }
+
     .header-top {
         flex-direction: column;
         align-items: center;
@@ -434,6 +530,19 @@ footer .social-icons a {
 
 /* Responsive Styles for Extra Small Screens (mobile devices) */
 @media (max-width: 768px) {
+
+    .close-button {
+        top: 28%;
+        right: -2%;
+    }
+
+    .testHeader {
+        display: none;
+    }
+
+    .navbar {
+        display: block;
+    }
 
     .logoNav img {
         width: 40px;

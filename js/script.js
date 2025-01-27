@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.navbar ul.mobile');  // Ensure this matches the HTML class
+    
 
     // Check if both elements exist before adding the event listener
     if (hamburger && mobileMenu) {
@@ -43,4 +44,28 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
         console.error("Hamburger button or mobile menu not found!");
     }
+
+    // Get the modal and close button elements
+    const modal = document.querySelector('.gallery-modal');
+    const closeButton = document.querySelector('.close-button');
+    const modalImage = document.querySelector('.modal-image');
+
+    // Get all gallery tiles and set up a click event
+    const galleryTiles = document.querySelectorAll('.gallery-tile');
+    modal.style.display = 'none';
+
+    galleryTiles.forEach(tile => {
+        tile.addEventListener('click', function() {
+            const imgSrc = this.querySelector('img').src;  // Get image source from clicked tile
+            modalImage.src = imgSrc;  // Set the modal image source to the clicked image
+            modal.style.display = 'flex';  // Show the modal
+            modalImage.style.display = 'flex';  // Show the modal
+        });
+    });
+
+    // Close the modal when the user clicks the close button
+    closeButton.addEventListener('click', function() {
+        modal.style.display = 'none';  // Hide the modal
+        modalImage.style.display = 'none'
+    });
 });
