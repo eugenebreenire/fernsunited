@@ -336,6 +336,15 @@ header {
     display: none;
 }
 
+.news-content iframe {
+    max-width: 90vw;
+}
+
+.news-frame {
+    max-width: 300px;
+
+}
+
 /* Tiles Section */
 .tiles {
     padding: 40px 20px;
@@ -584,6 +593,12 @@ footer .social-icons a {
         display: flex;
         flex-direction: column;
         overflow-y: visible;
+        justify-content: baseline;
+        align-items: center;
+    }
+
+    .news-content iframe {
+        width: 100vw;
     }
 
     .close-button {
