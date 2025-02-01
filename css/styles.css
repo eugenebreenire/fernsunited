@@ -287,6 +287,55 @@ header {
     color: #9E1B32;
 }
 
+/* Latest News */
+.latest-news {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.latest-news h2 {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 24px;
+    color: #9E1B32;
+}
+
+.latest-news h2::before,
+.latest-news h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 80px; /* Adjust the width as needed */
+    height: 1px;
+    background-color: #9E1B32; /* Adjust the color as needed */
+}
+
+.latest-news h2::before {
+    left: -80px; /* Adjust the position as needed */
+}
+
+.latest-news h2::after {
+    right: -80px; /* Adjust the position as needed */
+}
+
+.news-content {
+    display: flex;
+    max-width: 90vw;
+    overflow-y: hidden;
+    gap: 30px;
+}
+
+.news-content::-webkit-scrollbar {
+    display: none;
+}
+
 /* Tiles Section */
 .tiles {
     padding: 40px 20px;
@@ -530,6 +579,12 @@ footer .social-icons a {
 
 /* Responsive Styles for Extra Small Screens (mobile devices) */
 @media (max-width: 768px) {
+
+    .news-content {
+        display: flex;
+        flex-direction: column;
+        overflow-y: visible;
+    }
 
     .close-button {
         top: 28%;
