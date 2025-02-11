@@ -2,6 +2,23 @@
 <html lang="en">
 
 <head>
+    <!-- AppDynamics -->
+    <script charset="UTF-8" type="text/javascript">
+        window["adrum-start-time"] = new Date().getTime();
+        (function (config) {
+            config.appKey = "AD-AAB-ADY-FTM";
+            config.adrumExtUrlHttp = "http://cdn.appdynamics.com";
+            config.adrumExtUrlHttps = "https://cdn.appdynamics.com";
+            config.beaconUrlHttp = "http://pdx-col.eum-appdynamics.com";
+            config.beaconUrlHttps = "https://pdx-col.eum-appdynamics.com";
+            config.useHTTPSAlways = true;
+            config.xd = { "enable": true };
+            config.resTiming = { "bufSize": 200, "clearResTimingOnBeaconSend": true };
+            config.maxUrlLength = 512;
+        })(window["adrum-config"] || (window["adrum-config"] = {}));
+    </script>
+    <script src="//cdn.appdynamics.com/adrum/adrum-24.4.0.4454.js"></script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMJT8HLRXK"></script>
     <script>
