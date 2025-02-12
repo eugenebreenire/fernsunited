@@ -88,11 +88,14 @@ main {
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: bold;
+    padding: 5px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar a:hover {
     color: #9E1B32; /* Claret color for hover effect */
+    background-color: #ffffff;
+    border-radius: 10px;
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
@@ -602,11 +605,15 @@ footer .social-icons a {
 
     .close-button {
         top: 10%;
-        right: 2%;
+        right: 10px;
     }
 
     .modal-image {
         max-height: 500px;
+    }
+
+    .gallery-tile img{
+        max-width: 80%;
     }
 
     .testHeader {
