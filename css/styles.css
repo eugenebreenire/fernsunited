@@ -38,7 +38,7 @@ main {
 .modal-image {
     display: none;
     max-width: 90%;
-    max-height: 90%;
+    max-height: 80%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -278,7 +278,6 @@ header {
 
 /* Club Info Section */
 .info {
-    background-color: #f4f4f4;
     padding: 40px 20px;
     text-align: center;
 }
@@ -602,8 +601,12 @@ footer .social-icons a {
     }
 
     .close-button {
-        top: 28%;
-        right: -2%;
+        top: 10%;
+        right: 2%;
+    }
+
+    .modal-image {
+        max-height: 500px;
     }
 
     .testHeader {
