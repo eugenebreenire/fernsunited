@@ -3,22 +3,22 @@
 
 <head>
 
-        <!-- AppDynamics -->
-        <script charset="UTF-8" type="text/javascript">
-            window["adrum-start-time"] = new Date().getTime();
-            (function (config) {
-                config.appKey = "AD-AAB-ADY-FTM";
-                config.adrumExtUrlHttp = "http://cdn.appdynamics.com";
-                config.adrumExtUrlHttps = "https://cdn.appdynamics.com";
-                config.beaconUrlHttp = "http://pdx-col.eum-appdynamics.com";
-                config.beaconUrlHttps = "https://pdx-col.eum-appdynamics.com";
-                config.useHTTPSAlways = true;
-                config.xd = { "enable": true };
-                config.resTiming = { "bufSize": 200, "clearResTimingOnBeaconSend": true };
-                config.maxUrlLength = 512;
-            })(window["adrum-config"] || (window["adrum-config"] = {}));
-        </script>
-        <script src="//cdn.appdynamics.com/adrum/adrum-24.4.0.4454.js"></script>
+    <!-- AppDynamics -->
+    <script charset="UTF-8" type="text/javascript">
+        window["adrum-start-time"] = new Date().getTime();
+        (function (config) {
+            config.appKey = "AD-AAB-ADY-FTM";
+            config.adrumExtUrlHttp = "http://cdn.appdynamics.com";
+            config.adrumExtUrlHttps = "https://cdn.appdynamics.com";
+            config.beaconUrlHttp = "http://pdx-col.eum-appdynamics.com";
+            config.beaconUrlHttps = "https://pdx-col.eum-appdynamics.com";
+            config.useHTTPSAlways = true;
+            config.xd = { "enable": true };
+            config.resTiming = { "bufSize": 200, "clearResTimingOnBeaconSend": true };
+            config.maxUrlLength = 512;
+        })(window["adrum-config"] || (window["adrum-config"] = {}));
+    </script>
+    <script src="//cdn.appdynamics.com/adrum/adrum-24.4.0.4454.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMJT8HLRXK"></script>
@@ -31,16 +31,17 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get the App - Ferns United</title>
+    <title>Gallery - Ferns United</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/hamburgers/dist/hamburgers.css">
+    <!-- Font Awesome -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Hamburger.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/hamburgers/dist/hamburgers.css">
     <!-- Open Graph meta tags for WhatsApp -->
-    <meta property="og:title" content="Ferns United – Bonus Ball">
-    <meta property="og:description"
-        content="Find out more about how to get involved with Ferns United Bonus Ball">
-    <meta property="og:image" content="https://fernsunited.com/images/FernsIcon.png">
+    <meta property="og:title" content="Ferns United – Your Local Soccer Club">
+    <meta property="og:description" content="Club Shop - Open">
+    <meta property="og:image" content="https://fernsunited.com/images/clubshop.jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://fernsunited.com">
@@ -48,13 +49,15 @@
 </head>
 
 <body>
+    <!-- Fullscreen Modal (Initially Hidden) -->
     <div class="gallery-modal">
         <button class="close-button">&times;</button>
         <img class="modal-image" src="images/junior-boys-1.jpeg" alt="Full View">
     </div>
 
-   <!-- Navbar -->
-   <nav class="navbar">
+
+<!-- Navbar -->
+<nav class="navbar">
     <!-- Hamburger Button -->
     <div class="logoNav">
         <img src="images/FernsIcon.png" alt="Ferns United Logo">
@@ -88,7 +91,7 @@
         <li><a href="bonusball.html">Bonus Ball</a></li>
 
     </ul>
-</nav>  
+</nav> 
 
     <!-- Header with Logo and Title -->
     <header>
@@ -111,58 +114,31 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <section class="info">
-            <div class="container">
-                <h2>Ferns United Bonus Ball - How to Play</h2><br>
-                <h2>Step 1: Receive the link</h2>
-                <p>You can receive the link through Ferns United social media, WhatsApp or a Notification on KlubApp</p><br>
-                <p>This is how the notification would appear on KlubApp</p>
-                
-                <div class="gallery-tile"><img src="images/KlubAppNotificationBB.jpeg" alt="Register New Account"></div><br> 
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YMJT8HLRXK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YMJT8HLRXK');
+</script>
+
+    <!-- Main Gallery Content -->
+    <main class="gallery-page">
+        <h1>Club Shop - Open</h1>
+
+        <!-- Table Quiz -->
+        <section>
+            <h2>Check out what we have in stock!</h2>
+            <div class="gallery-grid">
+                <div class="gallery-tile">
+                    <a href="https://www.klubfunder.com/Clubs/Ferns_United_FC/ShopItems" target="_blank">
+                        <img src="images/clubshop.jpeg" alt="Table Quiz">
+                    </a>
+                </div>
             </div>
         </section>
-
-        <section class="info">
-            <div class="container">
-                <h2>Step 2: Click on the link</h2>
-                    <p>The link will bring you to a page where you can select a ball number</p><br>
-                    <p>Select "Add Ball to Basket"</p><br> 
-                    <div class="gallery-tile"><img src="images/KlubAppSelectBallBB.jpeg" alt="Register New Account"></div><br>
-            </div>
-        </section>
-
-        <section class="info">
-            <div class="container">
-                <h2>Step 3: Checkout </h2>
-                    <p>Select "Checkout"</p><br>
-                    <div class="gallery-tile"><img src="images/KlubFunderBallSelectedBB.jpeg" alt="Register New Account"></div><br>
-            </div>
-        </section>
-
-        <section class="info">
-            <div class="container">
-                <h2>Step 4: Enter Contact Details and Select "Pay"</h2>
-                    <div class="gallery-tile "><img src="images/KlupAppEnterDetailsBB.jpeg" alt="Register New Account"></div><br>
-            </div>
-        </section>
-
-        <section class="info">
-            <div class="container">
-                <h2>Step 5: Pay by card</h2>
-                <p>This might take you to further verification from your card services</p><br>
-                    <div class="gallery-tile "><img src="images/KlubFunderPayByCardBB.jpeg" alt="Register New Account"></div><br>
-            </div>
-        </section>
-
-        <section class="info">
-            <div class="container">
-                <h2>Step 6: Payment Confitmation</h2>
-                    <div class="gallery-tile "><img src="images/KlubFunderPaymentConfirmationBB.jpeg" alt="Register New Account"></div><br>
-            </div>
-        </section>
-
     </main>
 
     <!-- Footer -->
@@ -177,8 +153,8 @@
                 <a href="gallery.html">Gallery</a>
                 <a href="App.html">KlubApp</a>
                 <a href="events.html">Events</a>
+                <a href="https://www.klubfunder.com/Clubs/Ferns_United_FC/ShopItems">Shop</a>
                 <a href="bonusball.html">Bonus Ball</a>
-
             </div>
             <div class="social-icons">
                 <a href="https://www.facebook.com/fernsutd.fc" target="_blank" aria-label="Facebook">
@@ -195,14 +171,8 @@
         <p>&copy; 2025 Ferns United. All Rights Reserved.</p>
     </footer>
 
-    <!-- Script -->
+    <!-- Link to External JavaScript File -->
     <script src="js/script.js"></script>
-    <script>
-        document.querySelector('.hamburger').addEventListener('click', function () {
-            document.querySelector('.mobile').classList.toggle('open');
-        });
-    </script>
-
 </body>
 
 </html>
