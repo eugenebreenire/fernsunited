@@ -17,13 +17,13 @@ main {
 }
 
 h3 {
-    color: #000000;
+    color: #9E1B32;
 }
 
 /* Gallery Styling */
 
 .img-fit {
-    width: 50%;          /* Set width to 50% of its parent container */
+    width: 60%;          /* Set width to 50% of its parent container */
     height: auto;        /* Automatically adjust the height to maintain the aspect ratio */
     display: block;      /* Makes it a block element for centering */
     margin: 0 auto;      /* Centers the image horizontally */
@@ -630,6 +630,10 @@ footer .social-icons a {
 
 /* Responsive Styles for Extra Small Screens (mobile devices) */
 @media (max-width: 768px) {
+
+    .img-fit {
+        width: 100%;     
+    }
 
     .tile-content p {
         height: 20px;
