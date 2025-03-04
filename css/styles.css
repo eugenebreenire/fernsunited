@@ -16,8 +16,19 @@ main {
     margin: 20px;
 }
 
+h3 {
+    color: #000000;
+}
+
 /* Gallery Styling */
 
+.img-fit {
+    width: 50%;          /* Set width to 50% of its parent container */
+    height: auto;        /* Automatically adjust the height to maintain the aspect ratio */
+    display: block;      /* Makes it a block element for centering */
+    margin: 0 auto;      /* Centers the image horizontally */
+    object-fit: contain;
+}
 
 /* Modal Styling */
 .gallery-modal {
@@ -340,13 +351,23 @@ header {
 
 .news-content iframe {
     max-width: 90vw;
+    border-radius: 10px;
 }
 
 .news-frame {
     max-width: 300px;
-
 }
 
+.user-post {
+    border: 2px solid rgba(198, 197, 197, 0.962);
+    border-radius: 10px;
+    height: fit-content;
+    max-width: 400px;
+}
+
+.user-post img {
+    width: 80%;
+}
 /* Tiles Section */
 .tiles {
     padding: 40px 20px;
@@ -360,11 +381,16 @@ header {
     margin-bottom: 20px;
 }
 
-.tiles-grid {
+/* .tiles-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-}
+} */
+ .tiles-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+ }
 
 /* Individual Tile Style */
 .tile {
@@ -374,6 +400,14 @@ header {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease;
+    width: 200px;
+}
+
+.tile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 }
 
 .tile:hover {
@@ -389,6 +423,7 @@ header {
 .tile p {
     font-size: 1rem;
     color: #666;
+    height: 40px;
     margin-bottom: 20px;
 }
 
@@ -534,6 +569,11 @@ footer .social-icons a {
 /* Responsive Styles for Smaller Screens */
 @media (max-width: 1024px) {
 
+    .tiles-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .close-button {
         top: 25%;
         right: 2%;
@@ -590,6 +630,15 @@ footer .social-icons a {
 
 /* Responsive Styles for Extra Small Screens (mobile devices) */
 @media (max-width: 768px) {
+
+    .tile-content p {
+        height: 20px;
+    }
+
+    .tiles-grid {
+        flex-direction: column;
+        align-items: center;
+    }
 
     .news-content {
         display: flex;
